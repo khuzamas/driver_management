@@ -1,0 +1,17 @@
+{
+  "name": "driver_management",
+  "version": "1.0.0",
+  "description": "w10 exercise",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Khuzam",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.4"
+  }
+}

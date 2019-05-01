@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>new</title>
+</head>
+<body>
+    <h1>New Company Page</h1>
+    <form action="/companies" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="logo">Logo</label>
+        <input type="text" name="logo" id="logo">
+        <br>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address">
+        <br>
+        <label for="city">City</label>
+        <input type="text" name="city" id="city">
+        <br>
+        <label for="telephone">Telephone</label>
+        <input type="text" name="telephone" id="telephone">
+        <br>
+        <label for="drivers">Drivers</label>
+        <br>
+        <% drivers.forEach((driver) => { %>
+            <input type="checkbox" name="arrayOfDrivers" value="<%= driver._id %>">
+            <%= driver.name%>
+            <br>
+        <% }) %>
+
+        <!-- <h3>Driver info</h3>
+        <label for="driverName">Name</label>
+        <input type="text" name="driverName" id="driverName">
+        <br>
+        <label for="driverAge">Age</label>
+        <input type="text" name="driverAge" id="driverAge">
+        <br>
+        <label for="driverImage">Image</label>
+        <input type="text" name="driverImage" id="driverImage">
+
+        <h3>Car info</h3>
+        <label for="carName">Name</label>
+        <input type="text" name="carName" id="carName">
+        <br>
+        <label for="carModel">Model</label>
+        <input type="text" name="carModel" id="carModel">
+        <br>
+        <label for="carYear">Year</label>
+        <input type="text" name="carYear" id="carYear">
+        <br>
+        <label for="carImage">Image</label>
+        <input type="text" name="carImage" id="carImage"> -->
+        <br>
+        <input type="submit" value="Create Company">
+    </form>
+    
+</body>
+</html>

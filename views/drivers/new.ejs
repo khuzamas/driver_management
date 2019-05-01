@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Driver Page</h1>
+    <form action="/drivers" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age">
+        <br>
+        <label for="image">Image</label>
+        <input type="text" name="image" id="image">
+        <br>
+        <% cars.forEach((car) => {%>
+            <input type="checkbox" name="arrayOfCars" value="<%=car._id%>">
+            <%=car.name%>
+            <br>
+        <% }) %>
+        <input type="submit" value="Create Driver">
+    </form>
+</body>
+</html>
