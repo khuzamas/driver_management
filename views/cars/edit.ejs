@@ -16,23 +16,21 @@
         <a href="/cars">Cars</a>
         <a href="/cars/new">New Car</a>
     </nav>
-    <h1>New Driver Page</h1>
-    <form action="/drivers" method="POST">
+    <h1>Edit Car Page</h1>
+    <form action="/cars/<%=car._id%>?_method=PUT" method="POST">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" value="<%=car.name%>">
         <br>
-        <label for="age">Age</label>
-        <input type="text" name="age" id="age">
+        <label for="model">Model</label>
+        <input type="text" name="model" id="model" value="<%=car.model%>">
+        <br>
+        <label for="year">Year</label>
+        <input type="text" name="year" id="year" value="<%=car.year%>">
         <br>
         <label for="image">Image</label>
-        <input type="text" name="image" id="image">
+        <input type="text" name="image" id="image" value="<%=car.image%>">
         <br>
-        <% cars.forEach((car) => {%>
-            <input type="checkbox" name="arrayOfCars" value="<%=car._id%>">
-            <%=car.name%>
-            <br>
-        <% }) %>
-        <input type="submit" value="Create Driver">
+        <input type="submit" value="Update Car">
     </form>
 </body>
 </html>

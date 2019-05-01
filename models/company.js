@@ -13,6 +13,7 @@ const companySchema= new Schema({
 
 const Compnay= mongoose.model('Company', companySchema)
 module.exports= Compnay
+// module.exports.companySchema= companySchema
 
 // {
 //     name: {type: String, required: true},
